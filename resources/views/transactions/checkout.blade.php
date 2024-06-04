@@ -12,8 +12,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://logoengine.net/wp-content/themes/logo-mart/assets/css/style.css">
 
-        <link href="{!! asset('public/assets/css/style.css') !!}" rel="stylesheet">
-        <link href="{!! asset('public/css/spinning-loader.css') !!}" rel="stylesheet">
+        <link href="{!! asset('assets/css/style.css') !!}" rel="stylesheet">
+        <link href="{!! asset('css/spinning-loader.css') !!}" rel="stylesheet">
         <style>
             .form-group label.error{
                 color: #d41919 !important;
@@ -317,7 +317,7 @@
                                             </div>
                                         </div>
                                         <div class="payment-method-logo">
-                                            <img src="{!! asset('public/assets/images/creditcards-list.png') !!}" alt="">
+                                            <img src="{!! asset('assets/images/creditcards-list.png') !!}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -480,7 +480,7 @@
                     name: 'LogoEngine',
                     panelLabel: 'Checkout',
                     key: '{{ env('STRIPE_API_KEY') }}',
-                    image: '{!! asset('public/assets/images/logo-icon.png') !!}',
+                    image: '{!! asset('assets/images/logo-icon.png') !!}',
                     description: 'Purchasing: {!! request()->input('item') !!}',
                     token: function (responce) {
                         var $id = $('<input type=hidden name=stripeToken />').val(responce.id);
